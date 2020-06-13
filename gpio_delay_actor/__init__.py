@@ -48,7 +48,7 @@ class GPIODelay(ActorBase):
                 (gpio, since_last_off)
             )
 
-            if since_last_off < self.delay:
+            if since_last_off < float(self.delay):
                 cbpi.app.logger.info(
                     "Not enough time since last switched off GPIO %d" % gpio
                 )
